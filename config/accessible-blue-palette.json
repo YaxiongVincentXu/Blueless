@@ -1,0 +1,42 @@
+{
+  "problem": "Critical characters in a third-party database front end are currently bright light blue and need stronger visual focus.",
+  "policy": {
+    "critical_light_blue": "must_change",
+    "other_blue": "optional_change_or_leave_as_is",
+    "preferred_change_method": "vendor_supported_theme_or_field_formatting"
+  },
+  "recommended_replacements": [
+    {
+      "name": "navy_on_light_background",
+      "hex": "#003B73",
+      "use_when": "The application background is white or light and blue still carries useful meaning."
+    },
+    {
+      "name": "black_on_light_background",
+      "hex": "#000000",
+      "use_when": "Maximum readability is more important than preserving a blue semantic meaning."
+    },
+    {
+      "name": "warm_yellow_on_dark_background",
+      "hex": "#FFD166",
+      "use_when": "The application background is dark and the critical characters need strong emphasis."
+    },
+    {
+      "name": "white_on_dark_background",
+      "hex": "#FFFFFF",
+      "use_when": "The application background is dark and yellow conflicts with warning or status colors."
+    }
+  ],
+  "secondary_cues": [
+    "bold",
+    "underline",
+    "icon",
+    "explicit field label"
+  ],
+  "rollout": {
+    "staff_count": 10,
+    "requires_before_after_screenshots": true,
+    "requires_rollback_notes": true,
+    "requires_staff_validation": true
+  }
+}
